@@ -228,6 +228,18 @@ img {
   transform: translateY(-2px);
 }
 
+.btn-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 8px 20px rgba(220, 39, 67, 0.32);
+}
+
+.btn-instagram:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(220, 39, 67, 0.45);
+}
+
 .mobile-menu-btn {
   display: none;
   background: var(--forest-green);
@@ -1156,6 +1168,10 @@ img {
   flex-shrink: 0;
 }
 
+.contact-method-icon.ig-icon {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
 .contact-method-text span {
   display: block;
   font-size: 0.75rem;
@@ -1407,6 +1423,17 @@ img {
   gap: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-sep {
+  opacity: 0.5;
 }
 
 .footer-bottom {
@@ -1951,6 +1978,16 @@ img {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+  }
+
+  .footer-links-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+  }
+
+  .footer-sep {
+    display: none;
   }
 
   .footer-bottom {

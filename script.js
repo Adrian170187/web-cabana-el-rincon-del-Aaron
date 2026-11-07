@@ -144,8 +144,9 @@ const translations = {
 
     contact_eyebrow: "Contacto Directo",
     contact_title: "Consultas y Reservas",
-    contact_subtitle: "Comunicate directamente con Lorena por correo electrónico o WhatsApp para consultar disponibilidad y reservar tu estadía.",
+    contact_subtitle: "Comunicate directamente con Lorena por correo electrónico, WhatsApp o Instagram para consultar disponibilidad y reservar tu estadía.",
     wooden_sign_top: "CONSULTAS Y RESERVAS",
+    contact_ig_label: "Instagram Oficial",
     contact_email_label: "Dirección de Mail",
     contact_loc_label: "Medidas de la Propiedad",
     contact_loc_val: "Terreno 1800 m² • Cabaña 36 m² • Deck 20 m² • Quincho 6×8 m • Pileta 6,6×2,9×1,45 m",
@@ -317,8 +318,9 @@ const translations = {
 
     contact_eyebrow: "Direct Contact",
     contact_title: "Inquiries & Reservations",
-    contact_subtitle: "Contact Lorena directly via email or WhatsApp to check availability and book your stay.",
+    contact_subtitle: "Contact Lorena directly via email, WhatsApp, or Instagram to check availability and book your stay.",
     wooden_sign_top: "INQUIRIES & RESERVATIONS",
+    contact_ig_label: "Official Instagram",
     contact_email_label: "Email Address",
     contact_loc_label: "Property Measurements",
     contact_loc_val: "1800 m² Lot • 36 m² Cabin • 20 m² Deck • 6×8 m Quincho • 6.6×2.9×1.45 m Pool",
@@ -490,8 +492,9 @@ const translations = {
 
     contact_eyebrow: "Contato Direto",
     contact_title: "Consultas e Reservas",
-    contact_subtitle: "Entre em contato diretamente com a Lorena por e-mail ou WhatsApp para consultar disponibilidade e reservar sua estadia.",
+    contact_subtitle: "Entre em contato diretamente com a Lorena por e-mail, WhatsApp ou Instagram para consultar disponibilidade e reservar sua estadia.",
     wooden_sign_top: "CONSULTAS E RESERVAS",
+    contact_ig_label: "Instagram Oficial",
     contact_email_label: "Endereço de E-mail",
     contact_loc_label: "Medidas da Propriedade",
     contact_loc_val: "Terreno 1800 m² • Cabana 36 m² • Deck 20 m² • Quiosque 6×8 m • Piscina 6,6×2,9×1,45 m",
