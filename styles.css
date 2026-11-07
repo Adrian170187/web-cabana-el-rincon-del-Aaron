@@ -1,0 +1,1523 @@
+:root {
+  /* Exact palette from lore.jpeg flyer */
+  --bg-parchment: #f5ebd6;
+  --bg-parchment-light: #faf4e8;
+  --bg-parchment-deep: #ead9b8;
+  --forest-green: #2d4c24;
+  --forest-green-dark: #1e3618;
+  --forest-green-light: #3b6330;
+  --olive-green: #6b7c3e;
+  --wood-brown: #381d0a;
+  --wood-plank: #4a2610;
+  --wood-plank-dark: #2f1607;
+  --sun-gold: #f5b82e;
+  --text-main: #2b180a;
+  --text-muted: #574132;
+  --white: #ffffff;
+  --border-warm: rgba(56, 29, 10, 0.15);
+  --shadow-polaroid: 0 10px 28px rgba(43, 24, 10, 0.18);
+  --shadow-lg: 0 20px 44px rgba(43, 24, 10, 0.24);
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-parchment);
+  background-image: 
+    radial-gradient(at 15% 20%, rgba(255, 255, 255, 0.45) 0px, transparent 55%),
+    radial-gradient(at 85% 75%, rgba(234, 217, 184, 0.6) 0px, transparent 55%);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.brush-font {
+  font-family: 'Kaushan Script', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0.7rem 0;
+  background: rgba(245, 235, 214, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 2px solid rgba(45, 76, 36, 0.18);
+  box-shadow: 0 4px 20px rgba(56, 29, 10, 0.08);
+  transition: var(--transition);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Recreated Flyer Logo in Navbar */
+.flyer-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+  user-select: none;
+}
+
+.flyer-logo-svg {
+  height: 62px;
+  width: auto;
+  overflow: visible;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--wood-brown);
+  font-size: 0.92rem;
+  font-weight: 700;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background: var(--forest-green);
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--forest-green);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  background: rgba(56, 29, 10, 0.08);
+  border: 1px solid rgba(56, 29, 10, 0.18);
+  border-radius: 999px;
+  padding: 0.2rem;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--wood-brown);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.lang-btn:hover {
+  background: rgba(45, 76, 36, 0.1);
+}
+
+.lang-btn.active {
+  background: var(--forest-green);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(45, 76, 36, 0.35);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1.45rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.94rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-family: inherit;
+}
+
+.btn-forest {
+  background: var(--forest-green);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(45, 76, 36, 0.32);
+}
+
+.btn-forest:hover {
+  background: var(--forest-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(45, 76, 36, 0.45);
+}
+
+.btn-wood {
+  background: var(--wood-plank);
+  color: #fff;
+  border: 2px solid rgba(245, 184, 46, 0.4);
+  box-shadow: 0 8px 20px rgba(56, 29, 10, 0.32);
+}
+
+.btn-wood:hover {
+  background: var(--wood-brown);
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5b;
+  transform: translateY(-2px);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: var(--forest-green);
+  border: none;
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ==================== HERO (FLYER INSPIRED) ==================== */
+.hero {
+  position: relative;
+  padding: 7.5rem 0 4.5rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, #d8ecfa 0%, var(--bg-parchment) 100%);
+}
+
+.hero-bg-photo {
+  position: absolute;
+  inset: 0;
+  background-image: url('imagenes/WhatsApp Image 2026-11-06 at 21.25.10.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.hero-gradient-mask {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 235, 214, 0.72) 0%,
+    rgba(245, 235, 214, 0.55) 50%,
+    var(--bg-parchment) 100%
+  );
+  z-index: 1;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-top-grid {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+/* Big Hero Logo Block matching lore.jpeg */
+.hero-logo-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-logo-svg {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(255, 255, 255, 0.8));
+  margin-bottom: 1rem;
+}
+
+/* Green Brush Banner from Flyer ("¡Viví una experiencia única!") */
+.green-brush-banner {
+  position: relative;
+  display: inline-block;
+  background: var(--forest-green);
+  color: #fff;
+  padding: 0.85rem 2.2rem 1.15rem;
+  border-radius: 42% 58% 35% 65% / 55% 42% 58% 45%;
+  transform: rotate(-3deg);
+  box-shadow: 0 10px 24px rgba(45, 76, 36, 0.3);
+  margin-bottom: 1.25rem;
+}
+
+.green-brush-banner span {
+  font-family: 'Kaushan Script', cursive;
+  font-size: clamp(1.5rem, 3vw, 2.15rem);
+  display: block;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+.green-brush-banner::after {
+  content: '';
+  display: block;
+  width: 78%;
+  height: 4px;
+  background: #fff;
+  border-radius: 999px;
+  margin: 0.35rem auto 0;
+  transform: rotate(-1deg);
+}
+
+.hero-lead {
+  font-family: 'Kaushan Script', cursive;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  color: var(--wood-brown);
+  margin-bottom: 1rem;
+  line-height: 1.35;
+}
+
+.hero-sublead {
+  font-size: 1.02rem;
+  color: var(--text-muted);
+  margin-bottom: 1.6rem;
+  font-weight: 500;
+}
+
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+/* Polaroid Collage on Right of Hero (just like lore.jpeg) */
+.hero-polaroid-collage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.polaroid-card {
+  background: #fff;
+  padding: 0.65rem 0.65rem 2.2rem;
+  border-radius: 6px;
+  box-shadow: var(--shadow-polaroid);
+  position: relative;
+  transition: var(--transition);
+}
+
+.polaroid-card:nth-child(1) {
+  transform: rotate(-3deg);
+  grid-column: span 2;
+}
+
+.polaroid-card:nth-child(2) {
+  transform: rotate(2.5deg);
+}
+
+.polaroid-card:nth-child(3) {
+  transform: rotate(-2deg);
+}
+
+.polaroid-card:hover {
+  transform: rotate(0deg) scale(1.03);
+  z-index: 5;
+}
+
+.polaroid-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.polaroid-card:nth-child(1) img {
+  height: 240px;
+}
+
+.paper-tag {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  background: var(--bg-parchment);
+  border: 1px solid rgba(56, 29, 10, 0.14);
+  box-shadow: 0 4px 12px rgba(43, 24, 10, 0.16);
+  padding: 0.35rem 1.2rem;
+  border-radius: 4px;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.15rem;
+  color: var(--wood-brown);
+  white-space: nowrap;
+}
+
+/* Quick Measurements Bar */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background: var(--forest-green);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-lg);
+  border: 3px solid #fff;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.4rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-value {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.8rem;
+  color: var(--sun-gold);
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+}
+
+/* ==================== SECTIONS ==================== */
+.section {
+  padding: 5.5rem 0;
+}
+
+.section-alt {
+  background-color: var(--bg-parchment-light);
+  border-top: 1px solid var(--border-warm);
+  border-bottom: 1px solid var(--border-warm);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 740px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #fff;
+  background: var(--forest-green);
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  margin-bottom: 0.85rem;
+}
+
+.section-title {
+  font-family: 'Kaushan Script', cursive;
+  font-size: clamp(2.2rem, 4.2vw, 3.1rem);
+  color: var(--wood-brown);
+  margin-bottom: 0.75rem;
+  line-height: 1.15;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ==================== DIMENSIONS BENTO GRID ==================== */
+.dimensions-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.75rem;
+}
+
+.dim-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #fff;
+  padding: 0.75rem;
+  box-shadow: var(--shadow-polaroid);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.dim-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.dim-card-large {
+  grid-column: span 7;
+}
+
+.dim-card-medium {
+  grid-column: span 5;
+}
+
+.dim-photo-wrap {
+  position: relative;
+  height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dim-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.dim-card:hover .dim-photo-wrap img {
+  transform: scale(1.06);
+}
+
+.dim-measure-pill {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--forest-green);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.86rem;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+}
+
+.dim-card-content {
+  padding: 1.35rem 0.75rem 0.6rem;
+}
+
+.dim-card h3 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.65rem;
+  color: var(--wood-brown);
+  margin-bottom: 0.4rem;
+}
+
+.dim-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ==================== ROOMS & DISTRIBUTION ==================== */
+.rooms-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.room-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  box-shadow: var(--shadow-polaroid);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.room-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.room-img-wrap {
+  position: relative;
+  height: 235px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.room-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.room-card:hover .room-img-wrap img {
+  transform: scale(1.06);
+}
+
+.room-capacity-tag {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  background: var(--forest-green);
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.room-body {
+  padding: 1.25rem 0.65rem 0.65rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--forest-green);
+  font-weight: 800;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+
+.room-body h3 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.55rem;
+  color: var(--wood-brown);
+  margin-bottom: 0.55rem;
+}
+
+.room-body p {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  margin-bottom: 1.15rem;
+  flex: 1;
+}
+
+.room-features {
+  list-style: none;
+  border-top: 1px dashed rgba(56, 29, 10, 0.2);
+  padding-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  color: var(--wood-brown);
+  font-weight: 600;
+}
+
+.room-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.room-features li svg {
+  color: var(--forest-green);
+  flex-shrink: 0;
+}
+
+/* Capacity Banner styled like Flyer's Green Brushstroke + Wood */
+.capacity-banner {
+  margin-top: 2.5rem;
+  background: var(--forest-green);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border: 3px solid #fff;
+  box-shadow: var(--shadow-lg);
+}
+
+.capacity-banner-info {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.capacity-badge-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--sun-gold);
+  color: var(--wood-brown);
+  border: 3px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.6rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.capacity-banner h4 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.65rem;
+  color: var(--sun-gold);
+  margin-bottom: 0.2rem;
+}
+
+.capacity-banner p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.96rem;
+}
+
+/* ==================== AMENITIES (FLYER GREEN CIRCLES) ==================== */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.35rem;
+}
+
+.amenity-card {
+  background: #fff;
+  border: 1px solid var(--border-warm);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-polaroid);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.amenity-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--forest-green);
+}
+
+/* Circular dark green icon just like bottom of lore.jpeg */
+.amenity-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--forest-green);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(45, 76, 36, 0.3);
+}
+
+.amenity-card h4 {
+  font-weight: 800;
+  color: var(--wood-brown);
+  font-size: 1.08rem;
+  margin-bottom: 0.4rem;
+}
+
+.amenity-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* ==================== SEASONS SPLIT ==================== */
+.seasons-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.season-box {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  min-height: 360px;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  color: #fff;
+  border: 6px solid #fff;
+  box-shadow: var(--shadow-polaroid);
+}
+
+.season-box img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.season-box:hover img {
+  transform: scale(1.05);
+}
+
+.season-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(28, 20, 12, 0.86) 100%);
+}
+
+.season-content {
+  position: relative;
+  z-index: 2;
+}
+
+.season-tag {
+  display: inline-block;
+  padding: 0.32rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6rem;
+  background: var(--forest-green);
+  color: #fff;
+  border: 1.5px solid #fff;
+}
+
+.season-content h3 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.85rem;
+  color: var(--sun-gold);
+  margin-bottom: 0.4rem;
+}
+
+/* ==================== GALLERY ==================== */
+.gallery-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  background: #fff;
+  border: 1.5px solid rgba(56, 29, 10, 0.2);
+  color: var(--wood-brown);
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+.filter-btn:hover {
+  border-color: var(--forest-green);
+  color: var(--forest-green);
+}
+
+.filter-btn.active {
+  background: var(--forest-green);
+  color: #fff;
+  border-color: var(--forest-green);
+  box-shadow: 0 4px 12px rgba(45, 76, 36, 0.3);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  gap: 1.35rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+  background: #fff;
+  padding: 0.5rem;
+  box-shadow: var(--shadow-polaroid);
+  transition: var(--transition);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px) rotate(-0.8deg);
+}
+
+.gallery-item.hidden {
+  display: none;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.gallery-caption {
+  position: absolute;
+  inset: 0.5rem;
+  border-radius: 4px;
+  background: linear-gradient(180deg, transparent 45%, rgba(43, 24, 10, 0.88) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
+
+.gallery-caption span {
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(25, 15, 8, 0.94);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 1024px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-content img {
+  max-height: 78vh;
+  width: auto;
+  border-radius: 8px;
+  border: 6px solid #fff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-caption {
+  color: #fff;
+  margin-top: 1rem;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.35rem;
+  text-align: center;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: var(--forest-green);
+  border: 2px solid #fff;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  transform: scale(1.08);
+}
+
+.lightbox-close {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.lightbox-prev {
+  left: 1.5rem;
+  top: 50%;
+}
+
+.lightbox-next {
+  right: 1.5rem;
+  top: 50%;
+}
+
+/* ==================== CONTACT & WOODEN SIGN FROM FLYER ==================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Exact Recreation of the Wooden Sign at bottom-left of lore.jpeg */
+.wooden-sign-card {
+  background: 
+    repeating-linear-gradient(
+      -4deg,
+      rgba(0, 0, 0, 0.08) 0px,
+      rgba(0, 0, 0, 0.08) 2px,
+      transparent 2px,
+      transparent 14px
+    ),
+    linear-gradient(180deg, #542c14 0%, #3b1c0a 50%, #4d2610 100%);
+  color: #fff;
+  border-radius: 18px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 18px 38px rgba(43, 24, 10, 0.35), inset 0 2px 4px rgba(255, 255, 255, 0.15);
+  border: 3px solid #2b1406;
+  position: relative;
+  transform: rotate(-1deg);
+}
+
+.wooden-sign-plank-lines {
+  border-top: 2px dashed rgba(255, 255, 255, 0.15);
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.15);
+  padding: 1.25rem 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.wooden-sign-eyebrow {
+  font-size: 0.88rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f5ebd6;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.wooden-sign-wa-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.wa-badge-circle {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #4caf50;
+  border: 3.5px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+.wooden-sign-phone {
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: #fff;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.wooden-sign-lorena {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.wooden-sign-lorena::before,
+.wooden-sign-lorena::after {
+  content: '';
+  height: 2.5px;
+  width: 48px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 2px;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-method-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  transition: var(--transition);
+}
+
+.contact-method-item:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateX(4px);
+}
+
+.contact-method-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--forest-green);
+  border: 2px solid #fff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-method-text span {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f5ebd6;
+}
+
+.contact-method-text strong {
+  font-size: 0.95rem;
+  color: #fff;
+  word-break: break-all;
+}
+
+.flyer-preview-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(245, 235, 214, 0.14);
+  border: 1.5px solid rgba(245, 184, 46, 0.5);
+  padding: 0.85rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.flyer-preview-box:hover {
+  background: rgba(245, 235, 214, 0.24);
+}
+
+.flyer-preview-box img {
+  width: 54px;
+  height: 74px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  flex-shrink: 0;
+}
+
+/* Booking Form Card */
+.booking-form-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  border: 2px solid rgba(56, 29, 10, 0.12);
+  box-shadow: var(--shadow-polaroid);
+}
+
+.booking-form-card h3 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2rem;
+  color: var(--wood-brown);
+  margin-bottom: 0.35rem;
+}
+
+.booking-form-card > p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.6rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.15rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--wood-brown);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem 1rem;
+  border: 1.5px solid rgba(56, 29, 10, 0.22);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--bg-parchment-light);
+  color: var(--text-main);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--forest-green);
+  box-shadow: 0 0 0 3px rgba(45, 76, 36, 0.18);
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-actions .btn {
+  flex: 1;
+  min-width: 210px;
+}
+
+/* ==================== LOCATION & GOOGLE MAPS ==================== */
+.location-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 2.25rem;
+  align-items: stretch;
+}
+
+.map-frame-card {
+  background: #fff;
+  padding: 0.85rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-polaroid);
+  border: 2px solid rgba(56, 29, 10, 0.12);
+  display: flex;
+  flex-direction: column;
+  min-height: 430px;
+}
+
+.map-frame-card iframe {
+  width: 100%;
+  flex: 1;
+  min-height: 400px;
+  border: none;
+  border-radius: 14px;
+}
+
+.location-details-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-polaroid);
+  border: 2px solid rgba(56, 29, 10, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.35rem;
+}
+
+.location-details-card h3 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.9rem;
+  color: var(--wood-brown);
+  margin-bottom: 0.4rem;
+}
+
+.location-details-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.coords-box {
+  background: var(--bg-parchment-light);
+  border: 1.5px dashed rgba(45, 76, 36, 0.35);
+  border-radius: 14px;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.coords-label {
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--forest-green);
+}
+
+.coords-values {
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--wood-brown);
+  line-height: 1.45;
+}
+
+.location-entrance-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--bg-parchment);
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-warm);
+}
+
+.location-entrance-preview img {
+  width: 84px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  flex-shrink: 0;
+}
+
+.location-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.location-actions .btn {
+  flex: 1;
+  min-width: 180px;
+}
+
+/* ==================== NATURE FOOTER (PINES & WAVES FROM FLYER) ==================== */
+.flyer-nature-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: 2rem;
+}
+
+.flyer-nature-divider svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer {
+  background: var(--forest-green-dark);
+  color: rgba(255, 255, 255, 0.88);
+  padding: 2.5rem 0 2rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-bottom {
+  padding-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.86rem;
+  gap: 1rem;
+}
+
+/* Floating WhatsApp */
+.floating-wa {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 990;
+  background: #4caf50;
+  border: 3px solid #fff;
+  color: #fff;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 28px rgba(45, 76, 36, 0.45);
+  transition: var(--transition);
+}
+
+.floating-wa:hover {
+  transform: scale(1.08) translateY(-3px);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-parchment);
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    border-bottom: 2px solid var(--forest-green);
+    box-shadow: var(--shadow-polaroid);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+
+  .hero-top-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .dim-card-large,
+  .dim-card-medium {
+    grid-column: span 12;
+  }
+
+  .rooms-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .seasons-wrapper,
+  .contact-grid,
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wooden-sign-card {
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+  }
+
+  .amenities-grid,
+  .form-grid,
+  .hero-polaroid-collage {
+    grid-template-columns: 1fr;
+  }
+
+  .polaroid-card:nth-child(1) {
+    grid-column: span 1;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+}

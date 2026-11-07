@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cabañas Rincón del Aarón | Naturaleza, Descanso y Tranquilidad</title>
+  <meta name="description" content="Cabañas Rincón del Aarón: ¡Viví una experiencia única! Terreno de 1800 m², cabaña equipada para 5-6 personas, pileta 6,6x2,9x1,45 m, quincho de 6x8 m y vistas que enamoran." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#inicio" class="flyer-logo" aria-label="Cabañas Rincón del Aarón">
+        <!-- Recreated Vector Logo from lore.jpeg -->
+        <svg class="flyer-logo-svg" viewBox="0 0 360 115" xmlns="http://www.w3.org/2000/svg">
+          <g transform="rotate(-4 180 58)">
+            <!-- Golden Rising Sun & 5 Rays on Right Peak -->
+            <path d="M 218 28 A 22 22 0 0 1 258 34" fill="none" stroke="#f5b82e" stroke-width="4" stroke-linecap="round"/>
+            <line x1="224" y1="15" x2="220" y2="6" stroke="#f5b82e" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="238" y1="12" x2="239" y2="2" stroke="#f5b82e" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="252" y1="15" x2="258" y2="7" stroke="#f5b82e" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="263" y1="23" x2="272" y2="18" stroke="#f5b82e" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="268" y1="34" x2="278" y2="33" stroke="#f5b82e" stroke-width="3.5" stroke-linecap="round"/>
+
+            <!-- Three Dark-Brown Mountain Peaks -->
+            <path d="M 88 38 L 116 14 L 135 28 L 166 4 L 202 32 L 218 17 L 244 38" fill="none" stroke="#381d0a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 166 4 L 156 22 M 166 4 L 178 19 M 116 14 L 123 25" fill="none" stroke="#381d0a" stroke-width="3" stroke-linecap="round"/>
+
+            <!-- Brush Script Title: Cabañas + Rincón del Aarón -->
+            <text x="175" y="64" text-anchor="middle" font-family="'Kaushan Script', cursive" font-size="44" fill="#381d0a">Cabañas</text>
+            <text x="178" y="92" text-anchor="middle" font-family="'Kaushan Script', cursive" font-size="27" fill="#381d0a">Rincón del Aarón</text>
+
+            <!-- Forest Green Brush Underline -->
+            <path d="M 48 101 Q 175 95 312 99 Q 180 103 48 105 Z" fill="#2d4c24"/>
+          </g>
+        </svg>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
+        <li><a href="#espacios" data-i18n="nav_spaces">Medidas y Espacios</a></li>
+        <li><a href="#habitaciones" data-i18n="nav_rooms">Distribución</a></li>
+        <li><a href="#servicios" data-i18n="nav_amenities">Servicios</a></li>
+        <li><a href="#galeria" data-i18n="nav_gallery">Galería</a></li>
+        <li><a href="#ubicacion" data-i18n="nav_location">Ubicación</a></li>
+        <li><a href="#contacto" data-i18n="nav_contact">Reservas</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+          <button type="button" class="lang-btn active" data-lang="es" title="Español">🇪🇸 ES</button>
+          <button type="button" class="lang-btn" data-lang="en" title="English">🇺🇸 EN</button>
+          <button type="button" class="lang-btn" data-lang="pt" title="Português">🇧🇷 PT</button>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION (MATCHING FLYER) ==================== -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-photo"></div>
+    <div class="hero-gradient-mask"></div>
+
+    <div class="container hero-container">
+      <div class="hero-top-grid">
+        <!-- Left Column: Official Logo, Green Brush Banner & Description -->
+        <div class="hero-logo-showcase">
+          <!-- Full Vector Recreation of Flyer Logo -->
+          <svg class="hero-logo-svg" viewBox="0 0 500 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Cabañas Rincón del Aarón">
+            <g transform="rotate(-6 250 105)">
+              <!-- Rising Sun & 5 Rays -->
+              <path d="M 285 45 A 32 32 0 0 1 346 53" fill="none" stroke="#f5b82e" stroke-width="5.5" stroke-linecap="round"/>
+              <line x1="293" y1="27" x2="287" y2="12" stroke="#f5b82e" stroke-width="5" stroke-linecap="round"/>
+              <line x1="315" y1="22" x2="316" y2="6" stroke="#f5b82e" stroke-width="5" stroke-linecap="round"/>
+              <line x1="336" y1="27" x2="345" y2="14" stroke="#f5b82e" stroke-width="5" stroke-linecap="round"/>
+              <line x1="352" y1="38" x2="365" y2="30" stroke="#f5b82e" stroke-width="5" stroke-linecap="round"/>
+              <line x1="359" y1="53" x2="374" y2="51" stroke="#f5b82e" stroke-width="5" stroke-linecap="round"/>
+
+              <!-- Three Mountain Peaks -->
+              <path d="M 105 60 L 146 25 L 173 46 L 218 8 L 268 50 L 292 29 L 328 58" fill="none" stroke="#381d0a" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M 218 8 L 204 34 M 218 8 L 235 30 M 146 25 L 156 41 M 292 29 L 283 45" fill="none" stroke="#381d0a" stroke-width="4" stroke-linecap="round"/>
+
+              <!-- Main Script Typography -->
+              <text x="235" y="108" text-anchor="middle" font-family="'Kaushan Script', cursive" font-size="76" fill="#381d0a">Cabañas</text>
+              <text x="242" y="150" text-anchor="middle" font-family="'Kaushan Script', cursive" font-size="45" fill="#381d0a">Rincón del Aarón</text>
+
+              <!-- Green Brush Stroke Underline -->
+              <path d="M 28 164 Q 240 156 455 160 Q 245 166 28 171 Z" fill="#2d4c24"/>
+
+              <!-- Tagline -->
+              <text x="242" y="191" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="13.5" letter-spacing="3.2" fill="#1e3618" data-i18n="hero_badge">NATURALEZA • DESCANSO • TRANQUILIDAD</text>
+            </g>
+          </svg>
+
+          <!-- Green Brush Banner from Flyer -->
+          <div class="green-brush-banner">
+            <span data-i18n="hero_subtitle">¡Viví una experiencia única!</span>
+          </div>
+
+          <p class="hero-lead" data-i18n="hero_flyer_quote">
+            Cabañas equipadas para que disfrutes de la naturaleza en todo su esplendor. Desconectate, respirá, disfrutá...
+          </p>
+
+          <p class="hero-sublead" data-i18n="hero_desc">
+            Predio privado de 1.800 m² con cabaña de 36 m², deck panorámico de 20 m², gran quincho de 6 × 8 m y pileta de 6,6 × 2,9 × 1,45 m. Capacidad para 5 a 6 personas.
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#contacto" class="btn btn-forest">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span data-i18n="hero_cta_book">Consultas y Reservas</span>
+            </a>
+            <a href="#espacios" class="btn btn-wood">
+              <span data-i18n="hero_cta_explore">Ver Medidas de la Cabaña</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Polaroid Collage with Paper Tags (matching lore.jpeg) -->
+        <div class="hero-polaroid-collage">
+          <div class="polaroid-card">
+            <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.10.jpeg" alt="Vistas que enamoran desde el deck" />
+            <div class="paper-tag" data-i18n="polaroid_tag_views">Vistas que enamoran</div>
+          </div>
+
+          <div class="polaroid-card">
+            <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.17 (1).jpeg" alt="Comodidad y calidez en el interior" />
+            <div class="paper-tag" data-i18n="polaroid_tag_warmth">Comodidad y calidez</div>
+          </div>
+
+          <div class="polaroid-card">
+            <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.10 (1).jpeg" alt="Atardeceres increíbles en el deck" />
+            <div class="paper-tag" data-i18n="polaroid_tag_sunsets">Atardeceres increíbles</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Measurements Summary Bar -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value">1.800 m²</span>
+          <span class="stat-label" data-i18n="stat_land">Metros del Terreno</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">36 m² + 20 m²</span>
+          <span class="stat-label" data-i18n="stat_cabin">Cabaña (36m²) + Deck (20m²)</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">6 × 8 m</span>
+          <span class="stat-label" data-i18n="stat_quincho">Medida del Quincho</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">6,6 × 2,9 × 1,45 m</span>
+          <span class="stat-label" data-i18n="stat_pool">Medida de la Pileta</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MEDIDAS Y ESPACIOS EXTERIORES ==================== -->
+  <section class="section section-alt" id="espacios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="spaces_eyebrow">Medidas Exactas</span>
+        <h2 class="section-title" data-i18n="spaces_title">Amplios espacios en plena montaña</h2>
+        <p class="section-subtitle" data-i18n="spaces_subtitle">
+          Conocé todas las dimensiones de Cabañas Rincón del Aarón: terreno de 1.800 m², cabaña de 36 m², deck de 20 m², quincho de 6×8 m y pileta de 6,6×2,9×1,45 m.
+        </p>
+      </div>
+
+      <div class="dimensions-grid">
+        <!-- Card 1: Terreno 1800 m2 -->
+        <article class="dim-card dim-card-large">
+          <div class="dim-photo-wrap">
+            <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.15 (2).jpeg" alt="Terreno de 1800 metros cuadrados" loading="lazy" />
+            <div class="dim-measure-pill">
+              <span data-i18n="dim_land_badge">Terreno: 1.800 m²</span>
+            </div>
+          </div>
+          <div class="dim-card-content">
+            <h3 data-i18n="dim_land_title">Terreno de 1.800 Metros Cuadrados</h3>
+            <p data-i18n="dim_land_desc">
+              Un predio amplio, natural y seguro rodeado por los cerros. Cuenta con cochera propia dentro del terreno y privacidad para descansar en familia, en pareja o con amigos.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2: Cabaña 36m2 + Deck 20m2 -->
+        <article class="dim-card dim-card-medium">
+          <div class="dim-photo-wrap">
+            <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.10.jpeg" alt="Cabaña de 36 m2 y Deck de 20 m2" loading="lazy" />
+            <div class="dim-measure-pill">
+              <span data-i18n="dim_cabin_badge">Cabaña 36 m² + Deck 20 m²</span>
+            </div>
+          </div>
+          <div class="dim-card-content">
+            <h3 data-i18n="dim_cabin_title">Cabaña de 36 m² y Deck de 20 m²</h3>
+            <p data-i18n="dim_cabin_desc">
+              36 metros cuadrados de cálida cabaña de troncos totalmente equipada, sumados a un deck balcón terraza de 20 metros cuadrados con vistas panorámicas a la cordillera.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 3: Pileta 6.6 x 2.9 x 1.45 -->
+        <article class="dim-card dim-card-medium">
+          <div class="dim-photo-wrap">
+            <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.15 (1).jpeg" alt="Pileta de 6,6 x 2,9 x 1,45 metros" loading="lazy" />
+            <div class="dim-measure-pill">
+              <span data-i18n="dim_pool_badge">Pileta: 6,6 × 2,9 × 1,45 m</span>
+            </div>
+          </div>
+          <div class="dim-card-content">
+            <h3 data-i18n="dim_pool_title">Pileta con Solárium (6,6 × 2,9 × 1,45 m)</h3>
+            <p data-i18n="dim_pool_desc">
+              Pileta de 6,6 m de largo por 2,9 m de ancho y 1,45 m de profundidad, acompañada por un deck solárium de madera frente a las montañas.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 4: Quincho 6 x 8 -->
+        <article class="dim-card dim-card-large">
+          <div class="dim-photo-wrap">
+            <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.17.jpeg" alt="Quincho de 6 x 8 metros" loading="lazy" />
+            <div class="dim-measure-pill">
+              <span data-i18n="dim_quincho_badge">Quincho: 6 × 8 m (48 m²)</span>
+            </div>
+          </div>
+          <div class="dim-card-content">
+            <h3 data-i18n="dim_quincho_title">Gran Quincho de 6 × 8 Metros</h3>
+            <p data-i18n="dim_quincho_desc">
+              Amplio quincho techado de 6 × 8 metros con techo de paja, iluminación nocturna, parrilla, mesada y mesas con bancos de madera para compartir al aire libre.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DISTRIBUCIÓN Y HABITACIONES ==================== -->
+  <section class="section" id="habitaciones">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="rooms_eyebrow">Capacidad 5 a 6 Personas</span>
+        <h2 class="section-title" data-i18n="rooms_title">2 Habitaciones y Sofá Cama</h2>
+        <p class="section-subtitle" data-i18n="rooms_subtitle">
+          La cabaña tiene 2 habitaciones y un sofá cama en la cocina comedor, ofreciendo una distribución cómoda y versátil para 5 a 6 personas.
+        </p>
+      </div>
+
+      <div class="rooms-showcase">
+        <!-- Room 1: Habitación Matrimonial -->
+        <div class="room-card">
+          <div class="room-img-wrap">
+            <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.15.jpeg" alt="Habitación con cama matrimonial" loading="lazy" />
+            <span class="room-capacity-tag" data-i18n="room1_tag">Cama Matrimonial</span>
+          </div>
+          <div class="room-body">
+            <div class="room-icon-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/>
+              </svg>
+              <span data-i18n="room1_kicker">Habitación 1</span>
+            </div>
+            <h3 data-i18n="room1_title">Dormitorio Matrimonial</h3>
+            <p data-i18n="room1_desc">
+              Una de las habitaciones cuenta con una cómoda cama matrimonial, ambiente cálido en madera, cortina blackout y excelente iluminación.
+            </p>
+            <ul class="room-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="room1_feat1">1 Cama matrimonial de 2 plazas</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="room1_feat2">Cortina blackout y mesa de luz</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Room 2: Segunda Habitación Versátil -->
+        <div class="room-card">
+          <div class="room-img-wrap">
+            <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.12 (1).jpeg" alt="Segunda habitación con cucheta o segunda cama matrimonial" loading="lazy" />
+            <span class="room-capacity-tag" data-i18n="room2_tag">2 Camas o Matrimonial</span>
+          </div>
+          <div class="room-body">
+            <div class="room-icon-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/>
+              </svg>
+              <span data-i18n="room2_kicker">Habitación 2</span>
+            </div>
+            <h3 data-i18n="room2_title">Cucheta / 2 Camas Unibles</h3>
+            <p data-i18n="room2_desc">
+              La otra habitación tiene una cucheta, o sea dos camas más: si las juntás, tenés otra cama matrimonial lista para una segunda pareja.
+            </p>
+            <ul class="room-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="room2_feat1">Cucheta (2 camas individuales)</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="room2_feat2">Si las juntás, tenés otra cama matrimonial</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Room 3: Cocina Comedor con Sofá Cama -->
+        <div class="room-card">
+          <div class="room-img-wrap">
+            <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.08 (2).jpeg" alt="Sofá cama en la cocina comedor" loading="lazy" />
+            <span class="room-capacity-tag" data-i18n="room3_tag">Sofá Cama</span>
+          </div>
+          <div class="room-body">
+            <div class="room-icon-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 11h16a1 1 0 0 1 1 1v.5a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 12.5V12a1 1 0 0 1 1-1Z"/>
+                <path d="M6 14v4M18 14v4M5 8V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2"/>
+              </svg>
+              <span data-i18n="room3_kicker">Cocina Comedor</span>
+            </div>
+            <h3 data-i18n="room3_title">Cocina Comedor con Sofá Cama</h3>
+            <p data-i18n="room3_desc">
+              Amplio espacio de cocina comedor totalmente equipada que cuenta con un cómodo sofá cama frente a los ventanales con vista a la montaña.
+            </p>
+            <ul class="room-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="room3_feat1">Sofá cama en la cocina comedor</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-i18n="room3_feat2">Mesa comedor, TV, audio y salamandra</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="capacity-banner">
+        <div class="capacity-banner-info">
+          <div class="capacity-badge-circle">5–6</div>
+          <div>
+            <h4 data-i18n="cap_banner_title">Capacidad de Personas: Entre 5 y 6</h4>
+            <p data-i18n="cap_banner_desc">
+              Ideal para familias, parejas y grupos de amigos. Cabaña totalmente equipada en un entorno natural y seguro.
+            </p>
+          </div>
+        </div>
+        <a href="#contacto" class="btn btn-wood" data-i18n="cap_banner_btn">Consultar Disponibilidad</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICIOS Y EQUIPAMIENTO ==================== -->
+  <section class="section section-alt" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="amen_eyebrow">Comodidades</span>
+        <h2 class="section-title" data-i18n="amen_title">Cabaña Totalmente Equipada</h2>
+        <p class="section-subtitle" data-i18n="amen_subtitle">
+          Cuenta con internet, cochera, pileta, quincho con parrilla y todo el equipamiento necesario para tu descanso.
+        </p>
+      </div>
+
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+              <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+              <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+              <line x1="12" y1="20" x2="12.01" y2="20"></line>
+            </svg>
+          </div>
+          <h4 data-i18n="amen_wifi_title">Internet Wi-Fi</h4>
+          <p data-i18n="amen_wifi_desc">Conexión a internet en la cabaña para estar siempre comunicado rodeado de naturaleza.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+              <circle cx="7" cy="17" r="2"></circle>
+              <circle cx="17" cy="17" r="2"></circle>
+            </svg>
+          </div>
+          <h4 data-i18n="amen_parking_title">Cochera</h4>
+          <p data-i18n="amen_parking_desc">Cochera y estacionamiento propio dentro de los 1.800 m² del terreno junto a la cabaña.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/>
+            </svg>
+          </div>
+          <h4 data-i18n="amen_equipped_title">Totalmente Equipada</h4>
+          <p data-i18n="amen_equipped_desc">Cocina comedor completa, vajilla, TV, equipo de sonido, calefacción a leña y baño completo.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
+              <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
+              <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
+            </svg>
+          </div>
+          <h4 data-i18n="amen_pool_title">Pileta (6,6 × 2,9 × 1,45 m)</h4>
+          <p data-i18n="amen_pool_desc">Pileta con deck solárium de madera e increíbles vistas abiertas a la montaña.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+            </svg>
+          </div>
+          <h4 data-i18n="amen_bbq_title">Parrilla y Quincho (6 × 8 m)</h4>
+          <p data-i18n="amen_bbq_desc">Quincho techado de 6×8 m con parrilla, mesada y amplias mesas y bancos de madera.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+            </svg>
+          </div>
+          <h4 data-i18n="amen_safe_title">Entorno Natural y Seguro</h4>
+          <p data-i18n="amen_safe_desc">Tranquilidad absoluta en Vistacalma – Vida de Montaña para desconectarse y disfrutar.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+            </svg>
+          </div>
+          <h4 data-i18n="amen_deck_title">Deck Panorámico de 20 m²</h4>
+          <p data-i18n="amen_deck_desc">Terraza mirador de madera para disfrutar de atardeceres increíbles frente a los cerros.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h4 data-i18n="amen_family_title">Familias, Parejas y Amigos</h4>
+          <p data-i18n="amen_family_desc">Ideal para familias, parejas y grupos de amigos con capacidad cómoda entre 5 y 6 personas.</p>
+        </div>
+      </div>
+
+      <!-- 4 Seasons Highlight -->
+      <div class="seasons-wrapper" style="margin-top: 3.5rem;">
+        <div class="season-box season-summer">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.15 (1).jpeg" alt="Verano en Cabañas Rincón del Aarón" loading="lazy" />
+          <div class="season-overlay"></div>
+          <div class="season-content">
+            <span class="season-tag" data-i18n="season_summer_tag">Sol y Pileta</span>
+            <h3 data-i18n="season_summer_title">Días de Sol, Pileta y Quincho</h3>
+            <p data-i18n="season_summer_desc">Refrescate en la pileta de 6,6 × 2,9 × 1,45 m rodeado de montañas y disfrutá del deck de 20 m².</p>
+          </div>
+        </div>
+
+        <div class="season-box season-winter">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.11.jpeg" alt="Invierno nevado en Cabañas Rincón del Aarón" loading="lazy" />
+          <div class="season-overlay"></div>
+          <div class="season-content">
+            <span class="season-tag" data-i18n="season_winter_tag">Magia Invernal</span>
+            <h3 data-i18n="season_winter_title">Postales de Nieve en Invierno</h3>
+            <p data-i18n="season_winter_desc">Viví el encanto de los cerros nevados desde la calidez de la madera y sus ventanales panorámicos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GALERÍA FOTOGRÁFICA ==================== -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="gal_eyebrow">Nuestras Fotos</span>
+        <h2 class="section-title" data-i18n="gal_title">Galería de Cabañas Rincón del Aarón</h2>
+        <p class="section-subtitle" data-i18n="gal_subtitle">
+          Hacé clic en cualquier foto para ampliarla y recorrer la cabaña, el deck, la pileta, el quincho y el paisaje.
+        </p>
+      </div>
+
+      <div class="gallery-controls" role="tablist">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Todas las Fotos</button>
+        <button class="filter-btn" data-filter="exterior" data-i18n="filter_exterior">Cabaña y Deck</button>
+        <button class="filter-btn" data-filter="pileta" data-i18n="filter_pool">Pileta y Quincho</button>
+        <button class="filter-btn" data-filter="interior" data-i18n="filter_interior">Interior y Habitaciones</button>
+        <button class="filter-btn" data-filter="paisaje" data-i18n="filter_landscape">Montaña y Nieve</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Cabaña y Deck -->
+        <div class="gallery-item" data-category="exterior">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.10.jpeg" alt="Deck de 20 m² con vista a la montaña" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_deck_day">Deck panorámico de 20 m²</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.10 (1).jpeg" alt="Mate en el deck al atardecer" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_deck_mate">Atardeceres increíbles en el deck</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="exterior">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.07.jpeg" alt="Cabaña Rincón del Aarón de noche con cochera" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_cabin_night">Cabaña de 36 m² y cochera</span></div>
+        </div>
+
+        <!-- Pileta y Quincho -->
+        <div class="gallery-item" data-category="pileta">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.15 (1).jpeg" alt="Pileta de 6.6 x 2.9 x 1.45 m" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_pool_main">Pileta de 6,6 × 2,9 × 1,45 m</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="pileta">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.17.jpeg" alt="Quincho techado de 6x8 metros" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_quincho_day">Quincho de 6 × 8 m con parrilla</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="pileta">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.08 (1).jpeg" alt="Quincho iluminado de noche" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_quincho_night">Quincho iluminado de noche</span></div>
+        </div>
+
+        <!-- Interior y Habitaciones -->
+        <div class="gallery-item" data-category="interior">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.17 (1).jpeg" alt="Estar comedor con vista a los cerros" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_living_view">Comodidad y calidez interior</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.08 (2).jpeg" alt="Sofá cama en la cocina comedor" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_sofa_bed">Cocina comedor con sofá cama</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.15.jpeg" alt="Habitación matrimonial" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_bed_double">Habitación con cama matrimonial</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.08.jpeg" alt="Dormitorio matrimonial en madera" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_bed_double2">Calidez en madera y blackout</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.12 (1).jpeg" alt="Segunda habitación con dos camas convertibles" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_bed_twins">2ª Habitación (cucheta / 2ª matrimonial)</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.09 (1).jpeg" alt="Comedor con TV, audio y salamandra" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_tv_audio">TV, equipo de audio y salamandra</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="interior">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.09.jpeg" alt="Baño completo de la cabaña" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_bathroom">Baño completo equipado</span></div>
+        </div>
+
+        <!-- Paisaje y Nieve -->
+        <div class="gallery-item" data-category="paisaje">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.11.jpeg" alt="Cabaña y quincho bajo la nieve" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_snow_cabin">Cabaña y quincho nevados</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="paisaje">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.12.jpeg" alt="Pileta y cordillera nevada" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_snow_pool">Postal invernal en la montaña</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="paisaje">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.12 (2).jpeg" alt="Cerros nevados desde el predio" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_snow_hills">Vistas a los cerros nevados</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="paisaje">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.18 (2).jpeg" alt="Valle y montañas entre nubes" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_valley_clouds">Entorno natural de montaña</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="paisaje">
+          <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.13.jpeg" alt="Acceso Vistacalma Vida de Montaña" loading="lazy" />
+          <div class="gallery-caption"><span data-i18n="cap_vistacalma">Vistacalma • Vida de Montaña</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== UBICACIÓN Y GOOGLE MAPS ==================== -->
+  <section class="section section-alt" id="ubicacion">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="loc_eyebrow">Ubicación GPS</span>
+        <h2 class="section-title" data-i18n="loc_title">Cómo llegar a Cabañas Rincón del Aarón</h2>
+        <p class="section-subtitle" data-i18n="loc_subtitle">
+          Encontranos fácilmente en Google Maps con nuestras coordenadas exactas de montaña.
+        </p>
+      </div>
+
+      <div class="location-grid">
+        <div class="map-frame-card">
+          <iframe
+            title="Ubicación de Cabañas Rincón del Aarón en Google Maps"
+            src="https://maps.google.com/maps?q=-32.915115,-69.276843&hl=es&z=15&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="location-details-card">
+          <div>
+            <h3 data-i18n="loc_card_title">Vistacalma • Vida de Montaña</h3>
+            <p data-i18n="loc_card_desc">
+              Ubicada en un entorno natural privilegiado de la cordillera mendocina, con acceso directo y vistas inigualables en todas las estaciones del año.
+            </p>
+          </div>
+
+          <div class="coords-box">
+            <span class="coords-label" data-i18n="loc_coords_label">Coordenadas Google Maps</span>
+            <div class="coords-values">
+              <div>32°54'54.4"S 69°16'36.6"W</div>
+              <div>-32.915115, -69.276843</div>
+            </div>
+          </div>
+
+          <div class="location-entrance-preview">
+            <img src="imagenes/WhatsApp Image 2026-11-06 at 21.25.13.jpeg" alt="Cartel de ingreso Vistacalma Vida de Montaña" loading="lazy" />
+            <div>
+              <strong style="display:block; color:var(--wood-brown); font-size:0.95rem;" data-i18n="loc_sign_title">Ingreso Vistacalma</strong>
+              <span style="font-size:0.84rem; color:var(--text-muted);" data-i18n="loc_sign_desc">Referencia visual del acceso en el camino de montaña.</span>
+            </div>
+          </div>
+
+          <div class="location-actions">
+            <a href="https://www.google.com/maps?q=-32.915115,-69.276843" target="_blank" rel="noopener noreferrer" class="btn btn-forest">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span data-i18n="loc_btn_open">Ver en Google Maps</span>
+            </a>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=-32.915115,-69.276843" target="_blank" rel="noopener noreferrer" class="btn btn-wood">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+              </svg>
+              <span data-i18n="loc_btn_route">Cómo Llegar (GPS)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RESERVAS Y CONTACTO ==================== -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="contact_eyebrow">Contacto Directo</span>
+        <h2 class="section-title" data-i18n="contact_title">Consultas y Reservas</h2>
+        <p class="section-subtitle" data-i18n="contact_subtitle">
+          Comunicate directamente con Lorena por correo electrónico o WhatsApp para consultar disponibilidad y reservar tu estadía.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left Card: Wooden Plank Sign identical to lore.jpeg -->
+        <div class="wooden-sign-card">
+          <div class="wooden-sign-plank-lines">
+            <span class="wooden-sign-eyebrow" data-i18n="wooden_sign_top">CONSULTAS Y RESERVAS</span>
+            <a href="https://wa.me/5492616464455" target="_blank" rel="noopener noreferrer" class="wooden-sign-wa-row">
+              <div class="wa-badge-circle">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <span class="wooden-sign-phone">2616464455</span>
+            </a>
+            <div class="wooden-sign-lorena">Lorena</div>
+          </div>
+
+          <div class="contact-methods">
+            <a href="mailto:lorenaelenasosa75@gmail.com" class="contact-method-item">
+              <div class="contact-method-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-method-text">
+                <span data-i18n="contact_email_label">Dirección de Mail</span>
+                <strong>lorenaelenasosa75@gmail.com</strong>
+              </div>
+            </a>
+
+            <a href="https://www.google.com/maps?q=-32.915115,-69.276843" target="_blank" rel="noopener noreferrer" class="contact-method-item">
+              <div class="contact-method-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-method-text">
+                <span data-i18n="contact_gps_label">Ubicación Google Maps</span>
+                <strong>32°54'54.4"S 69°16'36.6"W (-32.915115, -69.276843)</strong>
+              </div>
+            </a>
+
+            <div class="contact-method-item">
+              <div class="contact-method-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                </svg>
+              </div>
+              <div class="contact-method-text">
+                <span data-i18n="contact_loc_label">Medidas de la Propiedad</span>
+                <strong data-i18n="contact_loc_val">Terreno 1800 m² • Cabaña 36 m² • Deck 20 m² • Quincho 6×8 m • Pileta 6,6×2,9×1,45 m</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="flyer-preview-box" id="openFlyerBtn" role="button" tabindex="0">
+            <img src="imagenes/lore.jpeg" alt="Folleto oficial Cabañas Rincón del Aarón" />
+            <div>
+              <strong style="display:block; color:#f5b82e; font-size:0.95rem;" data-i18n="flyer_title">Ver Folleto Original (lore.jpeg)</strong>
+              <span style="font-size:0.82rem; color:#f5ebd6;" data-i18n="flyer_sub">Hacé clic para ampliar el folleto</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Card: Interactive Inquiry Form -->
+        <div class="booking-form-card">
+          <h3 data-i18n="form_title">Envianos tu Consulta</h3>
+          <p data-i18n="form_subtitle">Completá los datos de tu estadía y elegí enviar tu mensaje por Mail o por WhatsApp a Lorena.</p>
+
+          <form id="bookingForm" onsubmit="return false;">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="guestName" data-i18n="form_name_label">Tu Nombre</label>
+                <input type="text" id="guestName" required placeholder="Ej. Juan Pérez" data-i18n-placeholder="form_name_ph" />
+              </div>
+
+              <div class="form-group">
+                <label for="guestCount" data-i18n="form_guests_label">Cantidad de Personas (Entre 5 y 6)</label>
+                <select id="guestCount">
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5" selected>5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="checkIn" data-i18n="form_checkin_label">Fecha de Ingreso</label>
+                <input type="date" id="checkIn" />
+              </div>
+
+              <div class="form-group">
+                <label for="checkOut" data-i18n="form_checkout_label">Fecha de Salida</label>
+                <input type="date" id="checkOut" />
+              </div>
+
+              <div class="form-group full-width">
+                <label for="bedPref" data-i18n="form_bed_label">Preferencia en 2ª Habitación</label>
+                <select id="bedPref">
+                  <option value="separadas" data-i18n="form_bed_opt1">Cucheta / Dos camas separadas</option>
+                  <option value="matrimonial" data-i18n="form_bed_opt2">Camas juntas (otra cama matrimonial)</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="guestMsg" data-i18n="form_msg_label">Consulta o Comentario</label>
+                <textarea id="guestMsg" rows="3" placeholder="Hola Lorena, me gustaría consultar disponibilidad y tarifas..." data-i18n-placeholder="form_msg_ph"></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-forest" id="sendEmailBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span data-i18n="form_btn_email">Enviar por Mail</span>
+              </button>
+
+              <button type="button" class="btn btn-whatsapp" id="sendWaBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span data-i18n="form_btn_wa">Consultar por WhatsApp</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FLYER FOOTER (MOUNTAINS, PINES & GREEN WAVES) ==================== -->
+  <div class="flyer-nature-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 175" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <!-- Mountain Peaks on Right like lore.jpeg -->
+      <path d="M 960 155 L 1045 75 L 1095 110 L 1175 42 L 1255 108 L 1310 68 L 1405 148" fill="none" stroke="#2d4c24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 1175 42 L 1155 82 M 1175 42 L 1198 78 M 1045 75 L 1060 100" fill="none" stroke="#2d4c24" stroke-width="3.5" stroke-linecap="round"/>
+
+      <!-- Pine Trees Silhouette -->
+      <g fill="#2d4c24">
+        <polygon points="1010,160 1030,110 1050,160"/>
+        <polygon points="1015,132 1030,92 1045,132"/>
+        <polygon points="1065,160 1090,95 1115,160"/>
+        <polygon points="1072,125 1090,75 1108,125"/>
+        <polygon points="1130,160 1152,105 1174,160"/>
+        <polygon points="1220,160 1245,98 1270,160"/>
+        <polygon points="1226,128 1245,78 1264,128"/>
+        <polygon points="1285,160 1308,108 1331,160"/>
+      </g>
+
+      <!-- Olive & Forest Green Waves from bottom of lore.jpeg -->
+      <path d="M 0 135 Q 360 85 720 138 T 1440 120 L 1440 175 L 0 175 Z" fill="#6b7c3e"/>
+      <path d="M 0 152 Q 420 108 860 148 T 1440 135 L 1440 175 L 0 175 Z" fill="#1e3618"/>
+    </svg>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <span class="brush-font" style="font-size: 1.75rem; color: #f5b82e;">Cabañas Rincón del Aarón</span>
+          <p data-i18n="footer_tagline" style="margin-top: 0.25rem;">Naturaleza • Descanso • Tranquilidad — Desconectate, respirá, disfrutá...</p>
+        </div>
+        <div>
+          <a href="mailto:lorenaelenasosa75@gmail.com" style="color: #f5b82e; font-weight: 700;">lorenaelenasosa75@gmail.com</a>
+          <span style="margin: 0 0.5rem;">|</span>
+          <a href="https://wa.me/5492616464455" target="_blank" rel="noopener noreferrer" style="color: #fff; font-weight: 700;">WhatsApp: 2616464455 (Lorena)</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="currentYear">2026</span> Cabañas Rincón del Aarón</span>
+        <span data-i18n="footer_specs">Terreno 1800 m² | Cabaña 36 m² | Deck 20 m² | Quincho 6×8 m | Pileta 6,6×2,9×1,45 m</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/5492616464455" target="_blank" rel="noopener noreferrer" class="floating-wa" aria-label="Contactar por WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+    </svg>
+  </a>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Anterior">❮</button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightboxImg" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Siguiente">❯</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
